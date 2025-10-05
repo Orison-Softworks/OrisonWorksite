@@ -4,14 +4,15 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #0d1117;
-    color: #c9d1d9;
+    background-color: #ffffff;
+    color: #1f2937; /* dark gray for readability */
 }
 
 header {
-    background: #161b22;
-    color: #c9d1d9;
+    background: #ffffff;
+    color: #111827; /* near-black text */
     padding: 10px 20px;
+    border-bottom: 1px solid #e5e7eb; /* subtle divider */
 }
 
 header nav ul {
@@ -26,21 +27,22 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #58a6ff;
+    color: #111827; /* default dark links */
     text-decoration: none;
     font-weight: bold;
 }
 
 header nav ul li a:hover {
     text-decoration: underline;
+    color: #0b63f6; /* blue accent on hover */
 }
 
 section {
     padding: 20px;
     margin: 20px;
-    background: #161b22;
+    background: #ffffff;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06); /* lighter shadow */
 }
 
 section#home {
@@ -55,14 +57,89 @@ section#home img {
 
 footer {
     text-align: center;
-    background: #0d1117;
-    color: #c9d1d9;
+    background: #ffffff;
+    color: #6b7280; /* muted gray */
     padding: 10px;
     position: relative;
     bottom: 0;
     width: 100%;
+    border-top: 1px solid #e5e7eb; /* subtle divider */
 }
 
 footer p {
     margin: 0;
+}
+
+/* Decorative accent lines (right side) */
+.accent-lines {
+    position: fixed;
+    right: -120px; /* push partly offscreen like the reference */
+    width: 360px;
+    height: 240px;
+    transform: rotate(45deg);
+    border-radius: 24px;
+    border: 10px solid #0b3a82; /* navy */
+    pointer-events: none; /* purely decorative */
+    z-index: 0;
+    opacity: 0.9;
+}
+
+/* create the other two lines */
+.accent-lines::before,
+.accent-lines::after {
+    content: "";
+    position: absolute;
+    inset: -28px; /* larger frame */
+    border-radius: 28px;
+    border: 10px solid #4f46e5; /* purple */
+}
+
+.accent-lines::after {
+    inset: 24px; /* smaller inner frame */
+    border-radius: 20px;
+    border-color: #33b5ff; /* sky blue */
+}
+
+/* positions for top and bottom groups */
+.accent-lines.top {
+    top: 10vh;
+}
+
+.accent-lines.bottom {
+    bottom: -40px;
+    right: -80px;
+    width: 300px;
+    height: 180px;
+}
+
+/* Left side variants */
+.accent-lines.left {
+    left: -120px;
+    right: auto;
+    transform: rotate(-45deg);
+}
+
+.accent-lines.left.bottom {
+    bottom: -40px;
+    left: -80px;
+    width: 300px;
+    height: 180px;
+}
+
+/* Center subtle accent */
+.accent-lines.center {
+    top: 45vh;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%) rotate(45deg);
+    width: 280px;
+    height: 180px;
+    opacity: 0.1; /* very subtle */
+    z-index: 0;
+}
+
+/* Ensure content stays above accents */
+header, section, footer {
+    position: relative;
+    z-index: 1;
 }

@@ -3,60 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OrisonWorks</title>
+    <meta name="description" content="OrisonWorks - Professional agency for online solutions, consultancy, and digital transformation.">
+    <meta name="keywords" content="consultancy, web development, digital marketing, online solutions, OrisonWorks">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://orisonworks.com/">
+    <meta property="og:title" content="OrisonWorks | Digital Solutions & Consultancy">
+    <meta property="og:description" content="Helping businesses thrive in the digital world through strategic planning and implementation.">
+    <meta property="og:image" content="OrisonLogo.png">
+
+    <title>OrisonWorks | Digital Solutions & Consultancy</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="OrisonLogo.png">
 </head>
-<body>
+<body class="light-theme">
     <header>
-        <nav>
-            <ul>
+        <nav class="container">
+            <div class="logo">
+                <img src="OrisonLogo.png" alt="OrisonWorks Logo" class="nav-logo">
+                <span>OrisonWorks</span>
+            </div>
+            <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+            <div class="header-actions">
+                <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm">Get Started</a>
+            </div>
+            <div class="mobile-menu-btn" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </div>
         </nav>
     </header>
 
-    <section id="home">
-        <img src="OrisonLogo.png" alt="Orison Softworks Logo">
-        <h1>Welcome to OrisonWorks</h1>
-        <p>Your Go-to Agency for online solutions and consultancy services.</p>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Empowering Your <span class="text-accent">Digital Future</span></h1>
+                    <p>Your Go-to Agency for innovative online solutions and strategic consultancy services designed to help your business scale.</p>
+                    <div class="hero-btns">
+                        <a href="#services" class="btn btn-primary">Our Services</a>
+                        <a href="#about" class="btn btn-outline">Learn More</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="OrisonLogo.png" alt="Orison Softworks Logo" class="floating-logo">
+                </div>
+            </div>
+        </section>
 
-    <section id="about">
-        <h2>About Us</h2>
-        <p>OrisonWorks specializes in providing online solutions and consultancy services to help businesses thrive in the internet space. From strategic planning to implementation, we are your trusted partners in navigating the digital world.</p>
-    </section>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Us</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p>OrisonWorks specializes in providing online solutions and consultancy services to help businesses thrive in the internet space. From strategic planning to implementation, we are your trusted partners in navigating the digital world.</p>
+                        <p>Founded on the principles of innovation and excellence, we bridge the gap between complex technology and business goals.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Clients Served</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="services">
-        <h2>Our Services</h2>
-        <ul>
-            <li>Online Business Consulting</li>
-            <li>Digital Marketing Strategies</li>
-            <li>Management Systems & Web Development</li>
-            <li>Ongoing Support and Maintenance</li>
-        </ul>
-    </section>
+        <section id="services" class="section bg-light">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Online Business Consulting</h3>
+                        <p>Strategic guidance to optimize your digital presence and operational efficiency.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                        <h3>Digital Marketing</h3>
+                        <p>Data-driven strategies to reach your target audience and increase conversion rates.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-code"></i></div>
+                        <h3>Web Development</h3>
+                        <p>Custom management systems and responsive websites built for performance.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Support & Maintenance</h3>
+                        <p>Ongoing technical support to ensure your systems remain secure and up-to-date.</p>
+                        <a href="#" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Email: <a href="mailto:mellorison@gmail.com">mellorison@gmail.com</a></p>
-        <p>Phone: +260 977745567</p>
-        <p>Lusaka, Zambia</p>
-    </section>
+        <section id="testimonials" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What Our Clients Say</h2>
+                    <div class="underline"></div>
+                </div>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"OrisonWorks transformed our digital strategy. Their consulting services helped us double our online engagement in just six months."</p>
+                        <div class="testimonial-user">
+                            <div class="user-info">
+                                <strong>John Chilufya</strong>
+                                <span>CEO, TechVentures</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                        <p>"Professional, responsive, and innovative. The web development team delivered a system that exceeded our expectations."</p>
+                        <div class="testimonial-user">
+                            <div class="user-info">
+                                <strong>Sarah Mwansa</strong>
+                                <span>Marketing Director, GlobalZ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Decorative accent lines (right side) -->
-    <div class="accent-lines top" aria-hidden="true"></div>
-    <div class="accent-lines bottom" aria-hidden="true"></div>
-    <!-- Decorative accent lines (left side) -->
-    <div class="accent-lines left top" aria-hidden="true"></div>
-    <div class="accent-lines left bottom" aria-hidden="true"></div>
-    <!-- Subtle center accent -->
-    <div class="accent-lines center" aria-hidden="true"></div>
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact Us</h2>
+                    <div class="underline"></div>
+                    <p>Ready to start your project? Get in touch today.</p>
+                </div>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <a href="mailto:mellorison@gmail.com">mellorison@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <h4>WhatsApp Us</h4>
+                                <a href="https://wa.me/260955646446">+260 955 646 446</a>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h4>Visit Us</h4>
+                                <p>Lusaka, Zambia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="form-name" placeholder="Your Name" required aria-label="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="form-email" placeholder="Your Email" required aria-label="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="form-message" placeholder="Your Message" rows="5" required aria-label="Your Message"></textarea>
+                        </div>
+                        <div class="contact-buttons" style="display: flex; gap: 10px; flex-direction: column;">
+                            <button type="button" id="whatsapp-btn" class="btn btn-success btn-block">
+                                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                            </button>
+                            <button type="button" id="email-btn" class="btn btn-primary btn-block">
+                                <i class="fas fa-envelope"></i> Send via Email
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Decorative accents -->
+    <div class="blob-accent top-right"></div>
+    <div class="blob-accent bottom-left"></div>
 
     <footer>
-        <p>&copy; 2025 OrisonWorks.</p>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>OrisonWorks</h3>
+                    <p>Navigating the digital world with you.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/0ris0n/?_rdc=1&_rdr#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 OrisonWorks. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
+
+    <script>
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            body.classList.toggle('light-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+
+        // Mobile Menu Script (Simple toggle for demo)
+        const mobileBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const barsIcon = mobileBtn.querySelector('i');
+            barsIcon.classList.toggle('fa-bars');
+            barsIcon.classList.toggle('fa-times');
+        });
+
+        // Contact Form Redirection
+        const whatsappBtn = document.getElementById('whatsapp-btn');
+        const emailBtn = document.getElementById('email-btn');
+
+        whatsappBtn.addEventListener('click', () => {
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const message = document.getElementById('form-message').value;
+            
+            if(!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const text = `Hello OrisonWorks, my name is ${name} (${email}). ${message}`;
+            const encodedText = encodeURIComponent(text);
+            window.open(`https://wa.me/260955646446?text=${encodedText}`, '_blank');
+        });
+
+        emailBtn.addEventListener('click', () => {
+            const name = document.getElementById('form-name').value;
+            const email = document.getElementById('form-email').value;
+            const message = document.getElementById('form-message').value;
+
+            if(!name || !email || !message) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            const subject = encodeURIComponent(`Inquiry from ${name}`);
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            window.location.href = `mailto:mellorison@gmail.com?subject=${subject}&body=${body}`;
+        });
+    </script>
 </body>
 </html>
